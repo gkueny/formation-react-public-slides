@@ -1,0 +1,24 @@
+{
+  "name": "exemple-import-export",
+  "version": "1.0.0",
+  "description": "Exemple d'utilisation des import export grâce à webpack",
+  "main": "index.js",
+  "scripts": {
+    "build:dev": "webpack --mode development",
+    "build:prod": "webpack --mode production "
+  },
+  "author": "@Occitech",
+  "license": "ISC",
+  "dependencies": {
+    "uuid": "^3.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
+    "@storybook/react": "^3.4.7",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  }
+}
