@@ -1,0 +1,4 @@
+- Ma variable m'est passée par mon parent via les props ? **Ne la mettez pas dans le state**
+- Ma variable n'est pas amenée à changer dans le temps ? **Ne la mettez pas dans le state**
+- Ma variable peut être déterminer à partir d'autres variables du state ou des props ?**Ne la mettez pas dans le state**
+- Ma variable ne remplie aucun des cas ci-dessus ? Alors sa place est surement dans le **state**
