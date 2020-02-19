@@ -2,7 +2,7 @@
 
 ```jsx
 import { connect } from "react-redux";
-import { increment } from "./actionCreators";
+import { increment } from "./actions";
 ```
 
 ```js
