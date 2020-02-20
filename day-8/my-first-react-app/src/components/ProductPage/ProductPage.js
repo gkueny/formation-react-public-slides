@@ -35,17 +35,38 @@ const useProduct = () => {
 
 const ProductPage = props => {
   const [product] = useProduct();
+  const [color, setColor] = React.useState("black");
+
+  React.useEffect(() => {
+    if (product && product.id) {
+      document.title = `${product.title} | ${color}`;
+    } else {
+      document.title = `Loading...`;
+    }
+  }, [color, product]);
 
   if (!product || !product.id) {
     return <div>Loading...</div>;
   }
+
+  let img = product.img;
+  if (color === "red") {
+    img = product.img2;
+  } else if (color === "blue") {
+    img = product.img3;
+  }
+
   return (
     <main className="product">
       <div className="left-column">
-        <Image src={product.img} alt={"produit 1"} />
+        <Image src={img} alt={"produit 1"} />
       </div>
       <div className="right-column">
-        <Infos product={product} addToCart={props.addToCart} />
+        <Infos
+          setColor={setColor}
+          product={product}
+          addToCart={props.addToCart}
+        />
       </div>
     </main>
   );

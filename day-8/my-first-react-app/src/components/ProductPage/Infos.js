@@ -19,6 +19,7 @@ const Infos = props => {
       <Configuration
         title={props.product.configTitle}
         items={props.product.configs}
+        setColor={props.setColor}
       />
 
       <div className="product-price">

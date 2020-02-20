@@ -13,6 +13,7 @@ const Configuration = props => {
                 id={item.id}
                 value={item.value}
                 dataImage={item.dataImage}
+                setColor={props.setColor}
               />
             );
           })}

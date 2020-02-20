@@ -11,6 +11,7 @@ import store from "./store";
 
 function App() {
   const [productsInCart, setProductsInCart] = React.useState([]);
+  const [notesWithoutRedux, setNotesWithoutRedux] = React.useState([]);
 
   const addToCart = product => {
     const isInArray = productsInCart.find(item => item.id === product.id);
@@ -40,13 +41,9 @@ function App() {
     setProductsInCart(newProductsInCart);
   };
 
-  const [notesWithoutRedux, setNotesWithoutRedux] = React.useState([]);
-
   const addNoteWithoutRedux = note => {
     setNotesWithoutRedux([...notesWithoutRedux, note]);
   };
-
-  console.log(productsInCart);
 
   return (
     <Provider store={store}>

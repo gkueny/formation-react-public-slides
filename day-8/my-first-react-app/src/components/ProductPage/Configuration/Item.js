@@ -11,7 +11,11 @@ const Item = props => {
         value={props.value}
       />
       <label htmlFor={props.id}>
-        <span></span>
+        <span
+          onClick={() => {
+            props.setColor(props.value);
+          }}
+        ></span>
       </label>
     </div>
   );

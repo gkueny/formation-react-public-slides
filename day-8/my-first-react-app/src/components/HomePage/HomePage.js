@@ -34,6 +34,7 @@ const useProducts = () => {
 };
 
 function HomePage() {
+  document.title = "Accueil";
   const [products, setSearchText, setNbProduct] = useProducts();
   const [count, setCount] = useCounter2State(0);
 
